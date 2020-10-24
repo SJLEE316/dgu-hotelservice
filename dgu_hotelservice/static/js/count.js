@@ -61,3 +61,8 @@ function realTotal(){
     // alert(realTotal_view.value);
 }
 
+function coupon(){
+    document.querySelector('#disp_coupon').style.display = "block";
+    discount_view.value=subtotal_view.value*0.1;
+    realTotal();
+}

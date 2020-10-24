@@ -7,5 +7,6 @@ urlpatterns=[
      path('order', order, name="order"),
      path('thankyou', thankyou, name="thankyou"),
      path('review', review, name="review"),
+     path('reviewedit', reviewedit, name="reviewedit"),
 
 ]

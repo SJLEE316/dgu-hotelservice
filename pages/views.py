@@ -13,3 +13,7 @@ def thankyou(request):
 
 def review(request):
     return render(request, 'pages/review.html')
+
+
+def reviewedit(request):
+    return render(request, 'pages/review_edit.html')

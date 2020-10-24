@@ -10,3 +10,6 @@ def order(request):
 
 def thankyou(request):
     return render(request, 'pages/thankyou.html')
+
+def review(request):
+    return render(request, 'pages/review.html')

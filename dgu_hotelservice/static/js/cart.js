@@ -57,7 +57,8 @@ function recalculate() {
 
 function realTotal(){
     var discount = document.getElementById("discount_view").value;
-    realTotal_view.value=subtotal_view.value - discount;
+    var tip = parseInt(document.getElementById("tip_view").value);
+    realTotal_view.value=subtotal_view.value - discount + tip;
     // alert(realTotal_view.value);
 }
 
@@ -65,4 +66,25 @@ function coupon(){
     document.querySelector('#disp_coupon').style.display = "block";
     discount_view.value=subtotal_view.value*0.1;
     realTotal();
+}
+
+// function Checkbox(a){
+//   var obj=document.getElementsByName("checkbox1");
+//   for(var i=0; i<obj.length; i++){
+//     if(obj[i]!=a){
+//       obj[i].checked=false;
+//     }
+//   }
+// }
+
+function fivedollar(){
+  tip_view.value="5";
+  realTotal();
+  
+}
+
+function tendollar(){
+  tip_view.value="10";
+  realTotal();
+  
 }

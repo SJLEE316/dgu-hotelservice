@@ -14,6 +14,9 @@ def thankyou(request):
 def review(request):
     return render(request, 'pages/review.html')
 
+def reviewadd(request):
+    return render(request, 'pages/review_add.html')
+
 
 def reviewedit(request):
     return render(request, 'pages/review_edit.html')

@@ -4,3 +4,6 @@ from django.shortcuts import render
 
 def cart(request):
     return render(request, 'pages/cart.html')
+
+def order(request):
+    return render(request, 'pages/order.html')

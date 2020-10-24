@@ -60,18 +60,29 @@
                     </td>
                     <td>$49.00</td>
                     <td>
-                      <div class="input-group mb-3" style="max-width: 120px;">
+                      <!-- <div class="input-group mb-3" style="max-width: 120px;">
                         <div class="input-group-prepend">
-                          <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
+                          <button class="btn btn-outline-primary js-btn-minus" onclick="form_btn(-1)" type="button">&minus;</button>
                         </div>
-                        <input type="text" class="form-control text-center" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                        <input type="text" class="form-control text-center" id="text" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
                         <div class="input-group-append">
-                          <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
+                          <button class="btn btn-outline-primary js-btn-plus" onclick="form_btn(1)" type="button">&plus;</button>
                         </div>
+                      </div> -->
+                      <div class="input-group-prepend">
+                        <button class="btn btn-outline-primary js-btn-minus" onclick="minus()" type="button">&minus;</button>
+                      </div>
+                      <input type="text" class="form-control text-center" id="count1" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-primary js-btn-plus" onclick="plus()" type="button">&plus;</button>
                       </div>
 
+
                     </td>
-                    <td>$49.00</td>
+                    <td>  <!-- 총 가격1 -->
+                      <input id="total_count"  value="49.00" class="form-control text-center" type="text" hidden=hidden/>
+                      <input id="total_count_view" value="49.00" class="form-control text-center" type="text" readonly/>
+                    </td>
                     <td><a href="#" class="btn btn-primary btn-sm">X</a></td>
                   </tr>
 
@@ -85,17 +96,28 @@
                     <td>$49.00</td>
                     <td>
                       <div class="input-group mb-3" style="max-width: 120px;">
-                        <div class="input-group-prepend">
-                          <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
+                        <!-- <div class="input-group-prepend">
+                          <button class="btn btn-outline-primary js-btn-minus" onclick="form_btn2(-1)" type="button">&minus;</button>
                         </div>
-                        <input type="text" class="form-control text-center" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                        <input type="text" class="form-control text-center" id="text2" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
                         <div class="input-group-append">
-                          <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
+                          <button class="btn btn-outline-primary js-btn-plus" onclick="form_btn2(1)" type="button">&plus;</button>
+                        </div> -->
+                        <div class="input-group-prepend">
+                          <button class="btn btn-outline-primary js-btn-minus" onclick="minus2()" type="button">&minus;</button>
                         </div>
+                        <input type="text" class="form-control text-center" id="count2" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-primary js-btn-plus" onclick="plus2()" type="button">&plus;</button>
+                        </div>
+
                       </div>
 
                     </td>
-                    <td>$49.00</td>
+                    <td>  <!-- 총 가격2 -->
+                      <input id="total_count2"  value="49.00" class="form-control text-center" type="text" hidden=hidden/>
+                      <input id="total_count_view2" value="49.00" class="form-control text-center" type="text" readonly/>
+                    </td>
                     <td><a href="#" class="btn btn-primary btn-sm">X</a></td>
                   </tr>
                 </tbody>
@@ -194,15 +216,6 @@
     </div>
 
   </div>
-
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/jquery-ui.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-
-  <script src="js/main.js"></script>
-    
+   
+  <script src="{% static 'js/count.js' %}"></script>
   </body>

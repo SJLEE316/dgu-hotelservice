@@ -68,15 +68,6 @@ function coupon(){
     realTotal();
 }
 
-// function Checkbox(a){
-//   var obj=document.getElementsByName("checkbox1");
-//   for(var i=0; i<obj.length; i++){
-//     if(obj[i]!=a){
-//       obj[i].checked=false;
-//     }
-//   }
-// }
-
 function fivedollar(){
   tip_view.value="5";
   realTotal();

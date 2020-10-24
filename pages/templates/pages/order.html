@@ -143,35 +143,18 @@
                     </tbody>
                   </table>
 
-                  <div class="border p-3 mb-3">
-                    <h3 class="h6 mb-0"><a class="d-block" data-toggle="collapse" href="#collapsebank" role="button" aria-expanded="false" aria-controls="collapsebank">카드결제</a></h3>
-
-                    <div class="collapse" id="collapsebank">
-                      <div class="py-2">
-                        <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
-                      </div>
+                    <div class="border p-3 mb-3">
+                        <label for="c_pay1" class="text-black" data-toggle="collapse" href="#pay1" role="button" aria-expanded="false" aria-controls="pay1"><input type="checkbox" name="checkbox1" value="a1" id="c_pay1" onclick="Checkbox(this)"> 카드결제 </label></br>
                     </div>
-                  </div>
 
-                  <div class="border p-3 mb-3">
-                    <h3 class="h6 mb-0"><a class="d-block" data-toggle="collapse" href="#collapsecheque" role="button" aria-expanded="false" aria-controls="collapsecheque">무통장입금</a></h3>
-
-                    <div class="collapse" id="collapsecheque">
-                      <div class="py-2">
-                        <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
-                      </div>
+                    <div class="border p-3 mb-3">
+                        <label for="c_pay2" class="text-black" data-toggle="collapse" href="#pay2" role="button" aria-expanded="false" aria-controls="pay2"><input type="checkbox" name="checkbox1" value="a2" id="c_pay2" onclick="Checkbox(this)"> 무통장입금 </label>
                     </div>
-                  </div>
 
-                  <div class="border p-3 mb-5">
-                    <h3 class="h6 mb-0"><a class="d-block" data-toggle="collapse" href="#collapsepaypal" role="button" aria-expanded="false" aria-controls="collapsepaypal">현장결제</a></h3>
-
-                    <div class="collapse" id="collapsepaypal">
-                      <div class="py-2">
-                        <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
-                      </div>
+                    <div class="border p-3 mb-5">
+                        <label for="c_pay3" class="text-black" data-toggle="collapse" href="#pay3" role="button" aria-expanded="false" aria-controls="pay3"><input type="checkbox" name="checkbox1" value="a3" id="c_pay3" onclick="Checkbox(this)"> 현장결제 </label>
+                
                     </div>
-                  </div>
 
                   <div class="form-group">
                     <a class="btn btn-primary btn-lg py-3 btn-block" href='{% url "pages:thankyou" %}'>Order</a>

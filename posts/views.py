@@ -30,3 +30,7 @@ def create(request):
         Post.objects.create(chef=chef, menu=menu, content=content)
         return redirect('posts:review')
 
+def delete(request, id):
+    post = get_object_or_404(Post, pk=id)
+    post.delete()
+    return redirect('posts:review')    

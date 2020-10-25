@@ -9,5 +9,6 @@ urlpatterns=[
      path('review', review, name="review"),
      path('reviewadd', reviewadd, name="reviewadd"),
      path('reviewedit', reviewedit, name="reviewedit"),
+     path('create/', create, name="create"),
 
 ]

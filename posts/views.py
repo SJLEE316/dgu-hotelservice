@@ -27,7 +27,8 @@ def create(request):
         chef = request.POST.get('chef')
         menu = request.POST.get('menu')
         content = request.POST.get('content')
-        Post.objects.create(chef=chef, menu=menu, content=content)
+        image=request.FILES.get('image')
+        Post.objects.create(chef=chef, menu=menu, content=content, image=image)
         return redirect('posts:review')
 
 def delete(request, id):

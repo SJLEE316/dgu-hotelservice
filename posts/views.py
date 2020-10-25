@@ -1,16 +1,26 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import *
 
 # Create your views here.
 def review(request):
-    return render(request, 'posts/review.html')
+    posts = Post.objects.all()
+    return render(request, 'posts/review.html',{'posts':posts})
 
 def reviewadd(request):
     return render(request, 'posts/review_add.html')
 
 
-def reviewedit(request):
-    return render(request, 'posts/review_edit.html')
+def reviewedit(request, id):
+    post=get_object_or_404(Post,pk=id)
+    if request.method=="POST":
+        post.chef=request.POST['chef']    
+        post.content=request.POST['content']
+        post.menu=request.POST['menu']
+        post.image=request.FILES.get('image')
+        post.save()
+        return redirect('posts:review')
+    return render(request, 'posts/review_edit.html', {"post":post})
+
 
 def create(request):
    if  request.method == "POST":
@@ -19,3 +29,4 @@ def create(request):
         content = request.POST.get('content')
         Post.objects.create(chef=chef, menu=menu, content=content)
         return redirect('posts:review')
+

@@ -40,24 +40,25 @@
           </div>
           <div class="col-md-12">
 
-            <form action="#" method="post">
-              
+            <form action="{% url 'posts:reviewedit' post.id %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+                      
               <div class="p-3 p-lg-5 border">
                 <div class="form-group row">
                   <div class="col-md-12">
                     <label for="c_fchef" class="text-black">Chef <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="c_fchef" name="c_fchef"  placeholder="Allen">
+                    <input type="text" class="form-control" id="c_fchef" name="chef"  value="{{post.chef}}">
                   </div>
                 </div>
                 <div class="form-group row">
                   <div class="col-md-12">
                     <label for="c_menu" class="text-black">Menu <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="c_menu" name="c_menu" placeholder="steak">
+                    <input type="text" class="form-control" id="c_menu" name="menu" value="{{post.menu}}">
                   </div>
                 </div>
                 <div class="form-group">
                     <label for="c_review" class="text-black">Review <span class="text-danger">*</span></label>
-                    <textarea name="c_review" id="c_review" cols="30" rows="5" class="form-control" placeholder="Write your review here..."></textarea>
+                    <textarea name="content" id="c_review" cols="30" rows="5" class="form-control">{{post.content}}</textarea>
                 </div>
     
 
@@ -68,7 +69,7 @@
                   </div>
                 </div> -->
                 <div class="form-group">
-                    <a class="btn btn-primary btn-lg py-3 btn-block" href='{% url "posts:review" %}'>Edit</a>
+                    <input type="submit" value="Edit" class="btn btn-primary btn-lg py-3 btn-block">
                 </div>
               </div>
             </form>

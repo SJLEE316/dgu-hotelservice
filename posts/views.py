@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .models import *
 
 # Create your views here.
 def review(request):
@@ -10,3 +11,11 @@ def reviewadd(request):
 
 def reviewedit(request):
     return render(request, 'posts/review_edit.html')
+
+def create(request):
+   if  request.method == "POST":
+        chef = request.POST.get('chef')
+        menu = request.POST.get('menu')
+        content = request.POST.get('content')
+        Post.objects.create(chef=chef, menu=menu, content=content)
+        return redirect('posts:review')

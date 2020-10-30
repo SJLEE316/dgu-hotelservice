@@ -1,3 +1,9 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/navbar/navbar.css' %}">
+<link rel="stylesheet" href="{% static 'css/navbar/slicknav.css' %}">
+
+
 <!-- Header Start -->
 <div class="header-area header-sticky">
     <div class="main-header ">
@@ -6,7 +12,7 @@
                 <!-- logo -->
                 <div class="col-xl-2 col-lg-2">
                     <div class="logo">
-                        <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                        <a href="index.html"><img src="{% static 'images/HIH2.png' %}" alt=""></a>
                     </div>
                 </div>
             <div class="col-xl-8 col-lg-8">
@@ -48,4 +54,7 @@
         </div>
     </div>
 </div>
+
+<script src="{% static './assets/js/jquery.slicknav.min.js' %}"></script>
+
 <!-- Header End -->

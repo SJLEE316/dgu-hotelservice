@@ -23,7 +23,7 @@ def reviewedit(request, id):
 
 
 def create(request):
-   if  request.method == "POST":
+    if  request.method == "POST":
         chef = request.POST.get('chef')
         menu = request.POST.get('menu')
         content = request.POST.get('content')

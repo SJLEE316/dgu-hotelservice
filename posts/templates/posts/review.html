@@ -41,7 +41,7 @@
                 <div class="float-md-left mb-4"><h2 class="text-black h5">Review</h2></div>
             </div>
             <div class="container-right">
-                <a href="{% url 'posts:reviewadd'  %}" class="btn btn-sm btn-primary">ADD</a>
+                <a href="{% url 'posts:review_add'  %}" class="btn btn-sm btn-primary">ADD</a>
             </div>
 
 
@@ -75,7 +75,7 @@
                                 <p class="card-text">{{ post.menu }}</p>
                                 <p class="card-text">{{ post.content }}</p>
                             </div>
-                            <a href="{% url 'posts:reviewedit' post.pk  %}" class="btn btn-sm btn-primary">Edit</a>
+                            <a href="{% url 'posts:review_edit' post.pk  %}" class="btn btn-sm btn-primary">Edit</a>
                             <a href="{% url 'posts:delete' post.pk  %}" class="btn btn-sm btn-primary">Delete</a>
 
                         </div>

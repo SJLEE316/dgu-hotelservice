@@ -6,11 +6,11 @@ def review(request):
     posts = Post.objects.all()
     return render(request, 'posts/review.html',{'posts':posts})
 
-def reviewadd(request):
+def review_add(request):
     return render(request, 'posts/review_add.html')
 
 
-def reviewedit(request, id):
+def review_edit(request, id):
     post=get_object_or_404(Post,pk=id)
     if request.method=="POST":
         post.chef=request.POST['chef']    
